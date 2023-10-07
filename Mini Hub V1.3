@@ -1,0 +1,167 @@
+-- Gui to Lua
+-- Version: 3.2
+-- Sentinel, Midnight
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+Frame.BackgroundTransparency = 0.500
+Frame.Position = UDim2.new(0.858712733, 0, 0.0237762257, 0)
+Frame.Size = UDim2.new(0.129513338, 0, 0.227972031, 0)
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Size = UDim2.new(1, 0, 1, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Toggle"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 50.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextStrokeTransparency = 0.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" , false , game)
+end)
+
+UITextSizeConstraint.Parent = TextButton
+UITextSizeConstraint.MaxTextSize = 50
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/Test.lua"))();
+
+local Window = Library.CreateLib("Mini Hub", "Midnight")
+
+local Tab1 = Window:NewTab("Main")
+
+local Section1 = Tab1:NewSection("Hubs")
+
+Section1:NewButton("Speed/Jpower/Gravity", "Made By Cristineespeleta", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/R2JLU0qy"))();
+end)
+
+Section1:NewButton("Games Hub", "Not Mine", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TakeModzz/Games-Hub-Script/main/Games%20Hub%20(Always%20updated)"))()
+end)
+
+Section1:NewButton("Game Hub", "Not Mine", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerScripter/Game-Hub/main/loader"))()
+end)
+
+Section1:NewButton("Ghost Hub X", "Not Mine", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+end)
+
+Section1:NewButton("Moon Hub", "Not Mine", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/IlikeyocutgHAH12/MoonUI-v10-/main/MoonUI%20v10'))()
+end)
+
+Section1:NewButton("Pendulum Hub", "Not Mine", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
+end)
+
+Section1:NewButton("Universal Shakars Hub", "Not Mine", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/shakar60/USH.P/main/rotected",true))()
+end)
+
+Section1:NewButton("Universal Hub", "Not Mine", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
+end)
+
+Section1:NewButton("Acrylix Hub", "Not Mine", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HubbyScripts/FE-Trolling-Hub/main/source"))()
+end)
+
+Section1:NewButton("DarkHub", "Not Mine", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init", true))()
+end)
+
+Section1:NewButton("EzHub", "Not Mine", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+end)
+
+Section1:NewButton("PsyHub", "Not Mine", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/Zt1a4aE9')))() 
+end)
+
+Section1:NewButton("Owl Hub", "Not Mine", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+local Section1 = Tab1:NewSection("Admin")
+
+Section1:NewButton("Nameless Admin", "New Admin", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))();
+end)
+
+Section1:NewButton("Infinite Yield", "Og Admin", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+local Section1 = Tab1:NewSection("Features")
+
+Section1:NewButton("Noclip", "Allows User To Walk Through Walls", function()
+    print("Still Working On This Feature Pls Wait For Next Update")
+end)
+
+Section1:NewButton("Esp", "Allows User To See Other Player", function()
+    print("Still Working On This Feature Pls Wait For Next Update")
+end)
+
+Section1:NewButton("Fly", "Allows User To Fly", function()
+    print("Still Working On This Feature Pls Wait For Next Update")
+end)
+
+Section1:NewButton("InfJump", "Allows User To Jump Many Times", function()
+    print("Still Working On This Feature Pls Wait For Next Update")
+end)
+
+local Tab2 = Window:NewTab("Notes")
+
+local Section2 = Tab2:NewSection("Informantion")
+
+Section2:NewLabel("Owner Roblox User : Cristineespeleta")
+
+Section2:NewLabel("Mini Hub Presents")
+
+Section2:NewLabel("Version : 1.3")
+
+Section2:NewLabel("Kavo Ui Library")
+
+Section2:NewLabel("Have Fun Using Mini Hub")
+
+Section2:NewLabel("Enjoy Using Mini Script")
+
+local Section2 = Tab2:NewSection("Toggle/Important")
+
+Section2:NewKeybind("Toggle", "Allow User To Toggle Hub", Enum.KeyCode.F6, function()
+    Library:ToggleUI()
+end)
+
+local Tab3 = Window:NewTab("ChangeLogs")
+
+local Section3 = Tab3:NewSection("Changes :")
+
+Section3:NewLabel("Type of Update : Small")
+
+Section3:NewLabel("Date Updated : Friday, October, 7")
+
+Section3:NewLabel("Added Features")
+
+Section3:NewLabel("Added 5 Hub On Main")
+
+Section3:NewLabel("Added Type Of Update")
+
+Section3:NewLabel("Updated To 1.3")
